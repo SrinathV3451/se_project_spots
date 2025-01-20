@@ -1,0 +1,124 @@
+.profile {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .profile__info {
+    text-align: center;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .profile__container-left {
+    display: flex;
+    justify-content: left;
+  }
+  
+  .profile__container-left-content{
+    display: flex;
+    flex-direction: column;  
+    justify-content: space-between;
+    align-items:flex-start;
+    margin-left: 20px;
+  }
+   .profile__container-text{
+    display: flex;
+    flex-direction: column;  
+    justify-content: space-between;
+    align-items:flex-start;
+    height: 32px;
+    width: 420px;
+   }
+
+  .profile__new-post{
+    width: 149px;
+    height: 52px;
+    padding: 18px 32px 18px 32px;
+    gap: 8px;
+    border-radius: 8px;
+    opacity: 0px;   
+    background-color: #212121;
+    color: white;
+    margin-top: 138px;
+   }
+
+  .profile__avatar {
+    width: 190px;
+    height: 190px;
+  }
+  
+  .profile__name {
+    font-weight: 700;
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 32px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .profile__role {
+    color: #777;
+    justify-content: left;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-top: 12px;
+  }
+  
+  .profile__edit-btn {
+    color: #212121;
+    background: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 107.34px;
+    height: 16px;
+    gap: 8px;
+    opacity: 0.7;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  
+  .profile__edit-btn:hover {
+    background: none;
+  }
+  @media (max-width: 480px) {
+    .profile__name {
+      font-size: 1rem;
+    }
+  
+    .profile__role {
+      font-size: 0.875rem;
+    }
+  
+    .profile__edit-btn {
+      font-size: 0.875rem;
+    }
+  }
+
+  .profile__posts {
+    width: Fixed (1,280px)px;
+    height: Hug (970px)px;
+    top: 310px;
+    left: 80px;
+    padding: 0px 0px 40px 0px;
+    gap: 20px;
+    border: 0px 0px 1px 0px;
+    opacity: 0px;
+    border-bottom: 1px solid #21212166
+  }
