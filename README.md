@@ -44,5 +44,5 @@ https://srinathv3451.github.io/se_project_spots/
 
 ## Video recording link
 
-https://drive.google.com/file/d/1_dYfair8Z_Cenu7FgwXnpmxRN394tu4s/view?usp=sharing
+https://drive.google.com/file/d/1_dYfair8Z_Cenu7FgwXnpmxRN394tu4s/view?usp=drive_link
 
