@@ -14,9 +14,6 @@
 
 .header__logo {
     padding-right: 2px;
-}
-
-.header__text {
     font-family: DM Mono, Arial, Helvetica, sans-serif;
     font-size: 22.78px;
     font-weight: 500;
