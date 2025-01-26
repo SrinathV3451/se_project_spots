@@ -1,25 +1,25 @@
 .header {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
 }
-  
+
 .header__title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
 }
 
 .header__logo {
-    padding-right: 2px;
-    font-family: DM Mono, Arial, Helvetica, sans-serif;
-    font-size: 22.78px;
-    font-weight: 500;
-    line-height: 29.66px;
-    letter-spacing: 0.2em;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
+  padding-right: 2px;
+  font-family: DM Mono, Arial, Helvetica, sans-serif;
+  font-size: 22.78px;
+  font-weight: 500;
+  line-height: 29.66px;
+  letter-spacing: 0.2em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
