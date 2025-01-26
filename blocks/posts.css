@@ -3,11 +3,13 @@
   left: 80px;
   padding: 0px 0px 40px 0px;
   gap: 20px;
-  border-bottom: 1px solid #21212166
+  border-bottom: 1px solid #21212166;
+  border-top: 1px solid #21212166;
 }
 
 .posts__grid {
   display: grid;
+  padding-top: 20px;
   gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
 }
