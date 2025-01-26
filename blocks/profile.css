@@ -29,10 +29,9 @@
 .profile__new-post {
   width: 149px;
   height: 52px;
-  padding: 18px 32px 18px 32px;
+  padding: 18px 22px 18px 22px;
   gap: 8px;
   border-radius: 8px;
-  opacity: 0;
   background-color: #212121;
   color: white;
   margin-top: 138px;
