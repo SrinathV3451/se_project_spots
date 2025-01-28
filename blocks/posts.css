@@ -1,6 +1,4 @@
 .posts {
-  top: 310px;
-  left: 80px;
   padding: 0px 0px 40px 0px;
   gap: 20px;
   border-bottom: 1px solid #21212166;
@@ -18,10 +16,7 @@
   .posts__grid {
     grid-template-columns: repeat(auto-fit, 288px);
   }
+  .posts {
+    padding: 0;
+  }    
 }
-/*
-@media (max-width: 880px) {
-  .posts__grid {
-    grid-template-columns: 1fr;
-  }
-} */
