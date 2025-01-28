@@ -17,14 +17,13 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-left: 20px;
+  max-width: 420px;
 }
 .profile__container-text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  height: 32px;
-  width: 420px;
 }
 
 .profile__new-post {
@@ -36,7 +35,7 @@
   background-color: #212121;
   color: white;
   cursor: pointer;
-  margin-top: 138px;
+  margin-top: auto;
 }
 
 .profile__avatar {
@@ -56,13 +55,18 @@
   text-decoration-skip-ink: none;
   margin-top: 0;
   margin-bottom: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .profile__role {
-  color: #212121B2;
+  color: #212121b2;
   opacity: 0.7;
   justify-content: left;
-  font-family: Poppins, Arial, sans-serif;;
+  font-family: Poppins, Arial, sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
@@ -70,19 +74,25 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   margin-top: 12px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .profile__edit-btn {
   color: #212121;
   background: none;
   border: none;
+  padding: 0;
   border-radius: 4px;
   cursor: pointer;
   width: 107.34px;
   height: 16px;
   gap: 8px;
   opacity: 0.7;
-  font-family: Poppins,  Arial, sans-serif;;
+  font-family: Poppins, Arial, sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
@@ -94,6 +104,32 @@
 .profile__edit-btn:hover {
   background: none;
 }
+
+@media (max-width: 630px) {
+  .profile {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile__info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile__container-text {
+    align-items: center;
+  }
+  .profile__info-content {
+    align-items: center;
+  }
+  .profile__role {
+    margin-top: 6px;
+    margin-bottom: 32px;
+  }
+  .profile__new-post {
+    margin-top: 20px;
+    width: 288px;
+  }
+}
+
 @media (max-width: 480px) {
   .profile__name {
     font-size: 1rem;
