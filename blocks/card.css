@@ -9,7 +9,7 @@
   height: 413px;
   border-radius: 8px;
   object-fit: cover;
-  gap:0;
+  gap: 12px;
 }
 
 .card__title {
@@ -34,6 +34,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
 }
 
 @media (max-width: 480px) {
@@ -43,6 +44,7 @@
   .card__title {
     font-size: 16px;
     line-height: 16px;
+    max-width: 252px;
   }
   .card__image {
     height: 288px;

@@ -3,7 +3,6 @@
   margin-bottom: 2rem;
   display: flex;
   justify-content: space-between;
-  border-bottom: 20px;
 }
 
 .profile__info {
@@ -35,14 +34,12 @@
   background-color: #212121;
   cursor: pointer;
   margin-top: auto;
+  align-items: center;
   color: #fcf5e5;
-  top: 20px;
-  left: 20px;
   display: flex;
 }
 
 .profile__new-post:hover {
-  background-color: #212121cc;
   opacity: 0.8;
 }
 
@@ -95,7 +92,6 @@
   display: flex;
   border: none;
   padding: 0;
-  border-radius: 4px;
   cursor: pointer;
   width: 107.34px;
   height: 16px;
@@ -105,13 +101,14 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
+  align-items: center;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
 
 .profile__edit-btn:hover {
-  opacity: 0.5;
+  opacity: 1;
 }
 
 @media (max-width: 630px) {
@@ -157,28 +154,18 @@
 @media (max-width: 320px) {
   .profile__avatar {
     width: 80px;
-    height: 104.35px;
+    height: 80px;
     gap: 0px;
-    opacity: 0px;
   }
 
   .profile__name {
-    font-family: Poppins;
     font-size: 20px;
-    font-weight: 500;
     line-height: 20px;
     text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
   }
 
   .profile__role {
-    font-family: Poppins;
     font-size: 16px;
-    font-weight: 500;
     line-height: 16px;
-    text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
   }
 }
