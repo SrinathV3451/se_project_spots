@@ -128,7 +128,7 @@
   }
   .profile__role {
     margin-top: 6px;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
   }
   .profile__new-post {
     margin-top: 20px;
@@ -167,5 +167,8 @@
   .profile__role {
     font-size: 16px;
     line-height: 16px;
+  }
+  .profile__info-content {
+    align-items: center;
   }
 }

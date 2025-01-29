@@ -12,11 +12,17 @@
   grid-template-columns: repeat(auto-fit, 413px);
   justify-content: center;
 }
- @media (max-width: 480px) {
+@media (max-width: 480px) {
   .posts__grid {
     grid-template-columns: repeat(auto-fit, 288px);
   }
   .posts {
     padding: 0;
+  }    
+}
+
+@media (max-width: 320px) {
+  .posts__grid {
+    padding: 20px;
   }    
 }
