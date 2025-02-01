@@ -17,7 +17,7 @@
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 500;
-  line-height: 25px;
+  line-height: 24px;
   text-align: left;
   color: #212121;
   text-underline-position: from-font;
@@ -34,7 +34,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
 }
 
 @media (max-width: 480px) {
@@ -44,6 +43,7 @@
   .card__title {
     font-size: 16px;
     max-width: 252px;
+    line-height: 16px;
   }
   .card__image {
     height: 288px;

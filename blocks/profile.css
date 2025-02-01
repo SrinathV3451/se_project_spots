@@ -17,6 +17,7 @@
   align-items: flex-start;
   margin-left: 20px;
   max-width: 420px;
+  margin-left: 0;
 }
 .profile__container-text {
   display: flex;
@@ -37,6 +38,10 @@
   align-items: center;
   color: #fcf5e5;
   display: flex;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
 }
 
 .profile__new-post:hover {
@@ -66,6 +71,7 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  padding-top: 12px;
 }
 
 .profile__role {
@@ -170,5 +176,12 @@
   }
   .profile__info-content {
     align-items: center;
+  }
+  .profile__edit-btn {
+    padding-top: 32px;
+  }
+
+  .profile__new-post{
+    padding-bottom: 20px;
   }
 }
