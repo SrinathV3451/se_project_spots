@@ -17,7 +17,6 @@
   align-items: flex-start;
   margin-left: 20px;
   max-width: 420px;
-  margin-left: 0;
 }
 .profile__container-text {
   display: flex;
@@ -31,7 +30,6 @@
   height: 52px;
   padding: 18px 22px 18px 22px;
   gap: 8px;
-  border-radius: 8px;
   background-color: #212121;
   cursor: pointer;
   margin-top: auto;
@@ -71,7 +69,6 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  padding-top: 12px;
 }
 
 .profile__role {
@@ -158,6 +155,9 @@
 }
 
 @media (max-width: 320px) {
+  .profile {
+    margin-bottom: 20px;
+  }
   .profile__avatar {
     width: 80px;
     height: 80px;
