@@ -1,7 +1,8 @@
 .profile {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
   display: flex;
+  padding-top: 34px;
   justify-content: space-between;
 }
 
@@ -31,6 +32,8 @@
   padding: 18px 22px 18px 22px;
   gap: 8px;
   background-color: #212121;
+  border-radius: 8px;
+  border: none;
   cursor: pointer;
   margin-top: auto;
   align-items: center;
@@ -157,6 +160,7 @@
 @media (max-width: 320px) {
   .profile {
     margin-bottom: 20px;
+    padding-top: 20px;
   }
   .profile__avatar {
     width: 80px;
@@ -168,6 +172,7 @@
     font-size: 20px;
     line-height: 20px;
     text-align: center;
+    padding-top: 12px;
   }
 
   .profile__role {
@@ -176,9 +181,12 @@
   }
   .profile__info-content {
     align-items: center;
+    text-align: center;
   }
   .profile__edit-btn {
     padding-top: 32px;
+    font-size: 16px;
+    line-height: 16px;
   }
 
   .profile__new-post{
