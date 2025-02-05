@@ -74,7 +74,7 @@
   -webkit-box-orient: vertical;
 }
 
-.profile__role {
+.profile__description {
   color: #212121b2;
   justify-content: left;
   font-family: Poppins, Arial, sans-serif;
@@ -132,7 +132,7 @@
   .profile__info-content {
     align-items: center;
   }
-  .profile__role {
+  .profile__description {
     margin-top: 6px;
     margin-bottom: 20px;
   }
@@ -148,7 +148,7 @@
     font-size: 1rem;
   }
 
-  .profile__role {
+  .profile__description {
     font-size: 0.875rem;
   }
 
@@ -175,7 +175,7 @@
     padding-top: 12px;
   }
 
-  .profile__role {
+  .profile__description {
     font-size: 16px;
     line-height: 16px;
   }
