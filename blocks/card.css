@@ -67,8 +67,7 @@
 @media (max-width: 320px) {
   .card {
     width: 288px;
-    height: 318px;
     gap: 12px;
-    opacity: 0px;
+    align-items: center;
   }
 }

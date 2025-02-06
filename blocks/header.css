@@ -14,3 +14,9 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
+
+@media (max-width: 320px) {
+  .header {
+    width: 288px;
+  }
+}
