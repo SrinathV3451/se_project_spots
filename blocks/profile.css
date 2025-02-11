@@ -1,9 +1,10 @@
 .profile {
   text-align: center;
-  margin-bottom: 20px;
   display: flex;
-  padding-top: 34px;
   justify-content: space-between;
+  padding: 34px 0 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .profile__info {
@@ -15,17 +16,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   margin-left: 20px;
   max-width: 420px;
-  max-height: 60px;
 }
 .profile__container-text {
   display: flex;
   flex-direction: column;
   justify-content:center;
   align-items: left; 
-  margin-top: 130px;
+  max-height: 190px;
 }
 
 .profile__new-post {
@@ -63,14 +63,16 @@
   font-size: 32px;
   font-weight: 500;
   color: #212121;
-  line-height: 32px;
+  line-height: 1;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   margin-top: 0;
   margin-bottom: 0;
   text-overflow: ellipsis;
-  overflow: hidden;
+  overflow:hidden;
+  max-width: 420px;
+  white-space: wrap;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -82,14 +84,16 @@
   font-family: Poppins, Arial, sans-serif;
   font-size: 16px;
   font-weight: 500;
-  line-height: 16px;
+  line-height: 1;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  max-width: 420px;
   margin-top: 12px;
   margin-bottom: 0;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: wrap;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -102,17 +106,15 @@
   padding: 0;
   cursor: pointer;
   width: 107.34px;
-  height: 16px;
+
   gap: 8px;
   opacity: 0.7;
   font-family: Poppins, Arial, sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
-  margin-top: 114px;
-  margin-right: 152px;
+  margin-top: auto;
   margin-bottom: 0;
-  align-items: left;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
@@ -126,25 +128,63 @@
   .profile {
     flex-direction: column;
     align-items: center;
+    max-width: 288px;
+    padding-top: 20px;
   }
+
+  .profile__avatar {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  
+  .profile__name {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    padding-bottom: 6px;
+  }
+  
   .profile__info {
     flex-direction: column;
+    justify-content: center;    
     align-items: center;
   }
+
   .profile__container-text {
     align-items: center;
   }
+
+  .profile__edit-btn {
+    font-size: 16px;
+    line-height: 16px;
+    align-items: end;
+    margin: 0;
+    padding-top: 20px;
+  }
+
   .profile__info-content {
     align-items: center;
+    text-align: center;
   }
+
   .profile__description {
     margin-top: 6px;
     margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    border:none;
   }
+
   .profile__new-post {
     margin-top: 20px;
     width: 288px;
     justify-content: center;
+    align-self: center;
   }
 }
 
@@ -161,12 +201,11 @@
     font-size: 0.875rem;
   }
 }
-
+/*
 @media (max-width: 320px) {
   .profile {
     margin-bottom: 20px;
     padding-top: 20px;
-    height: 274px;
   }
 
    .profile__avatar {
@@ -175,23 +214,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 40px;
+    margin-bottom: 12px;
   }
 
   .profile__name {
     font-size: 20px;
     line-height: 20px;
     text-align: center;
-    margin-right: 40px;
-    padding-top: 140px;
-    padding-bottom: 0;
+    padding-bottom: 6px;
   }
   .profile__description {
     font-size: 16px;
     line-height: 16px;
     text-align: center;
-    margin-right: 40px;
-    padding-bottom: 30px;
     border:none;
   }
   
@@ -200,8 +235,6 @@
     line-height: 16px;
     align-items: end;
     margin: 0;
-    margin-right: 50px;
-    padding-bottom: 200px;
     padding-top: 20px;
   }
 
@@ -212,12 +245,8 @@
   
   .profile__new-post{
     width: 288px;
-    height: 52px;
     align-self: start;
     margin-top: 20px;
   }
-
-  .profile__container-text {
-    margin-top: 122px;
-  }
 }
+*/

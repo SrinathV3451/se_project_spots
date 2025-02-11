@@ -5,8 +5,19 @@
 }
 
 .page__content {
-  max-width: 1280px;
-  margin: 0 auto;
+  /* max-width: 1280px;
   padding-bottom: 60px;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%; */
+  min-height: 100vh;
+  padding: 0 10px;
+}
 
+.page__section {
+  margin: 0 auto;
+  max-width: 1280px;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;  
 }
