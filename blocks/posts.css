@@ -20,20 +20,5 @@
   .posts{
     width: 288px;
     padding: 0px 0px 20px 0px;
-    gap: 20px;
-    border-top: 1px solid #21212166;
   }    
 }
-/*
-@media (max-width: 320px) {
-  .posts__grid {
-    padding: 0 0 20px;
-  }
-
-   .posts{
-    width: 288px;
-    padding: 0px 0px 20px 0px;
-    gap: 20px;
-    border: 0px 0px 1px 0px;
-  }
-}*/
