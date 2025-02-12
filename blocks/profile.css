@@ -15,7 +15,6 @@
 .profile__info-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: start;
   margin-left: 20px;
   max-width: 420px;
@@ -25,7 +24,6 @@
   flex-direction: column;
   justify-content:center;
   align-items: left; 
-  max-height: 190px;
 }
 
 .profile__new-post {
@@ -65,8 +63,6 @@
   color: #212121;
   line-height: 1;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   margin-top: 0;
   margin-bottom: 0;
   text-overflow: ellipsis;
@@ -86,8 +82,7 @@
   font-weight: 500;
   line-height: 1;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+  align-items: center;
   max-width: 420px;
   margin-top: 12px;
   margin-bottom: 0;
@@ -106,7 +101,6 @@
   padding: 0;
   cursor: pointer;
   width: 107.34px;
-
   gap: 8px;
   opacity: 0.7;
   font-family: Poppins, Arial, sans-serif;
@@ -143,7 +137,6 @@
   
   .profile__name {
     font-size: 20px;
-    line-height: 20px;
     text-align: center;
     padding-bottom: 6px;
   }
@@ -169,13 +162,13 @@
   .profile__info-content {
     align-items: center;
     text-align: center;
+    margin: 0;
   }
 
   .profile__description {
     margin-top: 6px;
     margin-bottom: 20px;
     font-size: 16px;
-    line-height: 16px;
     text-align: center;
     border:none;
   }
@@ -200,53 +193,4 @@
   .profile__edit-btn {
     font-size: 0.875rem;
   }
-}
-/*
-@media (max-width: 320px) {
-  .profile {
-    margin-bottom: 20px;
-    padding-top: 20px;
-  }
-
-   .profile__avatar {
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 12px;
-  }
-
-  .profile__name {
-    font-size: 20px;
-    line-height: 20px;
-    text-align: center;
-    padding-bottom: 6px;
-  }
-  .profile__description {
-    font-size: 16px;
-    line-height: 16px;
-    text-align: center;
-    border:none;
-  }
-  
-  .profile__edit-btn {
-    font-size: 16px;
-    line-height: 16px;
-    align-items: end;
-    margin: 0;
-    padding-top: 20px;
-  }
-
-  .profile__info-content {
-      align-items: center;
-      text-align: center;
-  }
-  
-  .profile__new-post{
-    width: 288px;
-    align-self: start;
-    margin-top: 20px;
-  }
-}
-*/
+} 
