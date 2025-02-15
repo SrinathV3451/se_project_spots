@@ -26,22 +26,57 @@ const initialCards = [
 ];
 
 const profileEditButton = document.querySelector(".profile__edit-btn");
+const profileInputEditText = document.querySelector(".profile__name");
+const profileDecscriptionEditText = document.querySelector(".profile__description");
+
+const cardTemplate = document.querySelector("#card-template");
+const cardsList = document.querySelector(".posts__grid");
 
 const editModal = document.querySelector("#edit-modal");
+const editFormElements = document.querySelector(".modal__form");
 const editModalCloseBtn = editModal.querySelector(".modal__close-btn");
+const editInputEditText = editModal.querySelector("#name");
+const editDecriptionEditText = editModal.querySelector("#description");
+
+function getCardElement(data){
+    const cardElement = cardTemplate.content.querySelector(".card").cloneNode(true);
+
+    const cardNameEl = cardElement.querySelector(".card__title");
+    const cardImageEl = cardElement.querySelector(".card__image");
+
+    cardNameEl.textContent = data.name;
+    cardImageEl.textContent = data.link;
+
+    return cardElement;
+}
+
 
 function openModal() {
   editModal.classList.add("modal__opened");
+  editInputEditText.value = profileInputEditText.textContent;
+  editDecriptionEditText.value = profileDecscriptionEditText.textContent;
 }
 
 function closeModel() {
   editModal.classList.remove("modal__opened");
 }
 
+function handleEditFormEventSubmit(evt) {
+    evt.preventDefault();
+    profileInputEditText.textContent = editInputEditText.value;
+    profileDecscriptionEditText.textContent = editDecriptionEditText.value;
+    closeModel();
+}
+
 profileEditButton.addEventListener("click", openModal);
 editModalCloseBtn.addEventListener("click", closeModel);
+editFormElements.addEventListener("submit",handleEditFormEventSubmit);
 
-
+for(let i=0; i < initialCards.length; i++) {
+    console.log(getCardElement(initialCards[i]));
+    const cardElement = getCardElement(initialCards[i]);
+    cardsList.prepend(cardElement);
+}
 
 
 
