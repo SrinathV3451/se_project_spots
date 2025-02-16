@@ -39,7 +39,7 @@ const editInputEditText = editModal.querySelector("#name");
 const editDecriptionEditText = editModal.querySelector("#description");
 
 function getCardElement(data){
-    const cardElement = cardTemplate.content.querySelector(".card").cloneNode(true);
+    const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
 
     const cardNameEl = cardElement.querySelector(".card__title");
     const cardImageEl = cardElement.querySelector(".card__image");
