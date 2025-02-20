@@ -8,130 +8,84 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body class="page">
-      <header class="header">
-        <img class="header__image" src="images/logo.svg" alt="spots logo" />
-      </header>
-      <main class="page__content">
-        <section class="profile page__section">
-          <div class="profile__info">
-            <img
-              src="images/avatar.jpg"
-              alt="Bessie Coleman"
-              class="profile__avatar"
-            />
-            <div class="profile__info-content">
-              <div class="profile__container-text">
-                <h1 class="profile__name">Bessie Coleman</h1>
-                <p class="profile__description">Civil Aviator</p>
-              </div>
-                <button class="profile__edit-btn" type="button">
-                  <img src="images/edit-logo.svg" alt="edit" />Edit Profile
-                </button>
+    <header class="header">
+      <img class="header__image" src="images/logo.svg" alt="spots logo" />
+    </header>
+    <main class="page__content">
+      <section class="profile page__section">
+        <div class="profile__info">
+          <img
+            src="images/avatar.jpg"
+            alt="Bessie Coleman"
+            class="profile__avatar"
+          />
+          <div class="profile__info-content">
+            <div class="profile__container-text">
+              <h1 class="profile__name">Bessie Coleman</h1>
+              <p class="profile__description">Civil Aviator</p>
             </div>
+            <button class="profile__edit-btn" type="button">
+              <img src="images/edit-logo.svg" alt="edit" />Edit Profile
+            </button>
           </div>
-          <button class="profile__new-post" type="button">
-            <img src="images/plus.svg" alt="edit" /> New Post
-          </button>
-        </section>
-        <section class="posts page__section"> 
-            <ul class="cards__list">
-              <template class="posts__grid" id="card-template">
-                <li class="card">
-               <img
-                class="card__image"
-              />
+        </div>
+        <button class="profile__new-post" type="button">
+          <img src="images/plus.svg" alt="edit" /> New Post
+        </button>
+      </section>
+      <section class="posts page__section">
+        <ul class="posts__list">
+          <template class="posts__grid" id="card-template">
+            <li class="card">
+              <img class="card__image" />
               <div class="card__footer">
-                <h2 class="card__title">Val Thorens</h2>
-                <button class="card__like-button" type="button" aria-label="card__like-button">
-                  
-                </button>
-              </div> 
-                </li>
-                <li class="card">
-               <img
-                class="card__image"
-              />
-              <div class="card__footer">
-                <h2 class="card__title">Restaurant terrace</h2>
-                <button class="card__like-button" type="button" aria-label="card__like-button">
-                
-                </button>
-              </div> 
-                </li>
-                <li class="card">
-               <img
-                class="card__image"
-              />
-              <div class="card__footer">
-                <h2 class="card__title">An outdoor cafe</h2>
-                <button class="card__like-button" type="button" aria-label="card__like-button">
-                
-                </button>
-              </div> 
-                </li>
-                <li class="card">
-               <img
-                class="card__image"
-              />
-              <div class="card__footer">
-                <h2 class="card__title">
-                  A very long bridge, over the forest and through the trees
-                </h2>
-                <button class="card__like-button" type="button" aria-label="card__like-button">
-               
-                </button>
-              </div> 
-                </li>
-                <li class="card">
-               <img
-                class="card__image"
-              />
-              <div class="card__footer">
-                <h2 class="card__title">Tunnel with morning light</h2>
-                <button class="card__like-button" type="button" aria-label="card__like-button">
-                
-                </button>
-              </div> 
-                </li>
-                <li class="card">
-               <img
-                class="card__image"
-              />
-              <div class="card__footer">
-                <h2 class="card__title">Mountain house</h2>
-                <button class="card__like-button" type="button" aria-label="card__like-button">
-                 
-                </button>
-              </div> 
-                </li>
-              </template>
-            </ul>
-        </section>
-      </main>
-      <footer class="footer">
-        <p class="footer__copyright">2023 © Spots</p>
-      </footer>
-      <div class="modal" id="edit-modal"> 
-        <div class="modal__container"> 
-          <button class="modal__close-btn" type="button">
-          </button>
-          <div class="modal__footer">
+                <h2 class="card__title"></h2>
+                <button
+                  class="card__like-button"
+                  type="button"
+                  aria-label="card__like-button"
+                ></button>
+              </div>
+            </li>
+          </template>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyright">2023 © Spots</p>
+    </footer>
+    <div class="modal" id="edit-modal">
+      <div class="modal__container">
+        <div class="modal__head">
+          <div class="modal__header">
             <h2 class="modal__title">Edit profile</h2>
           </div>
-          <form name="edit-profile" class="modal__form"> 
-            <label for="name" class="modal__label"> Name 
-              <input id="name" type="text" class="modal__input" placeholder="Type your name"/> 
-            </label> 
-            <label for="description" class="modal__label"> Description 
-              <input id="description" type="text" class="modal__input" placeholder="Describe yourself" />
-            </label> 
-            <br>
-            <button type="submit" class="modal__submit-btn">
-              <label class="modal__save">Save</label>
-            </button> 
-          </form> 
-        </div> 
+          <button class="modal__close-btn" type="button"></button>
+        </div>
+        <form name="edit-profile" class="modal__form">
+          <label for="name" class="modal__label">
+            Name
+            <input
+              id="name"
+              type="text"
+              class="modal__input"
+              placeholder="Type your name"
+            />
+          </label>
+          <label for="description" class="modal__label">
+            Description
+            <input
+              id="description"
+              type="text"
+              class="modal__input"
+              placeholder="Describe yourself"
+            />
+          </label>
+          <br />
+          <button type="submit" class="modal__submit-btn">Save</button>
+        </form>
       </div>
-      <script defer src="./scripts/index.js"></script>
+    </div>
+    <script defer src="./scripts/index.js"></script>
   </body>
 </html>

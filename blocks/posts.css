@@ -5,6 +5,11 @@
   border-top: 1px solid #21212166;
 }
 
+.posts__list {
+  list-style: none;
+  padding-left: 0;
+}
+
 .posts__grid {
   display: grid;
   padding-top: 20px;

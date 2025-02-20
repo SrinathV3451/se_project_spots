@@ -33,10 +33,6 @@
   justify-content: space-between;
 }
 
-.cards__list {
-  list-style: none;
-  padding-left: 0;
-}
 
 @media (max-width: 630px) {
   .card {

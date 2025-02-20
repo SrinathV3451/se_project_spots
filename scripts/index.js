@@ -53,24 +53,24 @@ function getCardElement(data){
 
 
 function openModal() {
-  editModal.classList.add("modal__opened");
+  editModal.classList.add("modal_opened");
   editInputEditText.value = profileInputEditText.textContent;
   editDecriptionEditText.value = profileDecscriptionEditText.textContent;
 }
 
-function closeModel() {
-  editModal.classList.remove("modal__opened");
+function closeModal() {
+  editModal.classList.remove("modal_opened");
 }
 
 function handleEditFormEventSubmit(evt) {
     evt.preventDefault();
     profileInputEditText.textContent = editInputEditText.value;
     profileDecscriptionEditText.textContent = editDecriptionEditText.value;
-    closeModel();
+    closeModal();
 }
 
 profileEditButton.addEventListener("click", openModal);
-editModalCloseBtn.addEventListener("click", closeModel);
+editModalCloseBtn.addEventListener("click", closeModal);
 editFormElements.addEventListener("submit",handleEditFormEventSubmit);
 
 for(let i=0; i < initialCards.length; i++) {
