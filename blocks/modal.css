@@ -127,14 +127,21 @@
   }
 
   .modal__head {
-    width: 276;
-    height: 40;
+    width: 276px;
+    height: 40px;
     justify-content: space-between;
   }
 
+  .modal__input {
+    height: 48px;
+    gap: 8px;
+    border: 1px;
+    gap: 10px;
+  }
+
   .modal__submit-btn {
-    width: 276;
-    height: 52;
+    width: 276px;
+    height: 48px;
     gap: 8px;
     border-radius: 8px;
     padding-top: 18px;
@@ -158,5 +165,10 @@
     border-radius: 8px;
     padding: 12px;
     gap: 24px;
+  }
+  .modal__close-btn {
+    opacity: 0.4;
+    height: 40px;
+    width: 40px;
   }
 }
