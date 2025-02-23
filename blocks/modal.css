@@ -134,14 +134,13 @@
 
   .modal__input {
     height: 48px;
-    gap: 8px;
-    border: 1px;
+    border: 1px solid black;
     gap: 10px;
   }
 
   .modal__submit-btn {
     width: 276px;
-    height: 48px;
+    height: 58px;
     gap: 8px;
     border-radius: 8px;
     padding-top: 18px;
@@ -170,5 +169,7 @@
     opacity: 0.4;
     height: 40px;
     width: 40px;
+    position: absolute;
+    right: 21px;
   }
 }
