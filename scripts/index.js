@@ -57,7 +57,13 @@ function openModal() {
   editInputEditText.value = profileInputEditText.textContent;
   editDecriptionEditText.value = profileDecscriptionEditText.textContent;
 }
-
+/*
+ditModalButton.addEventListener("click", () => {
+    // Use an arrow function and call the openModal method inside it. 
+    // Pass it the appropriate modal as an argument.
+    openModal(editModal);
+  })
+*/
 function closeModal() {
   editModal.classList.remove("modal_opened");
 }
@@ -73,13 +79,10 @@ profileEditButton.addEventListener("click", openModal);
 editModalCloseBtn.addEventListener("click", closeModal);
 editFormElements.addEventListener("submit",handleEditFormEventSubmit);
 
-for(let i=0; i < initialCards.length; i++) {
-    console.log(getCardElement(initialCards[i]));
-    const cardElement = getCardElement(initialCards[i]);
+initialCards.forEach((item) => {    
+    const cardElement = getCardElement(item);
     cardsList.prepend(cardElement);
-}
-
-
+});
 
 
 
