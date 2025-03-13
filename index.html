@@ -29,7 +29,7 @@
             </button>
           </div>
         </div>
-        <button class="profile__new-post" type="button">
+        <button class="profile__new-post" type="button" title="delete">
           <img src="images/plus.svg" alt="edit" /> New Post
         </button>
       </section>
@@ -37,6 +37,11 @@
         <ul class="posts__list">
           <template class="posts__grid" id="card-template">
             <li class="card">
+              <button
+                class="card__delete-image"
+                alt="button"
+                type="button"
+              ></button>
               <img class="card__image" />
               <div class="card__footer">
                 <h2 class="card__title"></h2>
@@ -77,6 +82,39 @@
             <input
               id="description"
               type="text"
+              class="modal__input"
+              placeholder="Describe yourself"
+            />
+          </label>
+          <br />
+          <button type="submit" class="modal__submit-btn">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" id="add-card-edit-modal">
+      <div class="modal__container">
+        <div class="modal__head">
+          <div class="modal__header">
+            <h2 class="modal__title">Edit profile</h2>
+          </div>
+          <button class="modal__close-btn" type="button"></button>
+        </div>
+        <form name="add-card-edit-profile" class="modal__form">
+          <label for="add-card-link-name" class="modal__label">
+            Image link
+            <input
+              id="add-card-link-name"
+              type="url"
+              class="modal__input"
+              placeholder="Type your name"
+            />
+          </label>
+          <label for="add-card-name-description" class="modal__label">
+            Caption
+            <input
+              id="add-card-name-description"
+              type="name"
               class="modal__input"
               placeholder="Describe yourself"
             />
