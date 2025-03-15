@@ -22,8 +22,8 @@
 .profile__container-text {
   display: flex;
   flex-direction: column;
-  justify-content:center;
-  align-items: start; 
+  justify-content: center;
+  align-items: start;
 }
 
 .profile__new-post {
@@ -66,7 +66,7 @@
   margin-top: 0;
   margin-bottom: 0;
   text-overflow: ellipsis;
-  overflow:hidden;
+  overflow: hidden;
   max-width: 420px;
   white-space: wrap;
   display: -webkit-box;
@@ -135,15 +135,15 @@
     justify-content: center;
     margin-bottom: 12px;
   }
-  
+
   .profile__name {
     font-size: 20px;
     text-align: center;
   }
-  
+
   .profile__info {
     flex-direction: column;
-    justify-content: center;    
+    justify-content: center;
     align-items: center;
   }
 
@@ -169,7 +169,7 @@
     margin-bottom: 20px;
     text-align: center;
     font-size: 16px;
-    border:none;
+    border: none;
   }
 
   .profile__new-post {
