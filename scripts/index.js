@@ -50,8 +50,8 @@ const formModalCloseBtn = cardForm.querySelector(".modal__close-btn");
 const cardFormUrl = cardForm.querySelector("#add-card-link-name");
 const cardFormCaption = cardForm.querySelector("#add-card-name-description");
 const previewModal = document.querySelector("#preview-modal");
-const previewModalImage = previewModal.querySelector(".card__image");
-const previewModalCaption = previewModal.querySelector(".card__title-preview");
+const previewModalImage = previewModal.querySelector(".modal__image");
+const previewModalCaption = previewModal.querySelector(".modal__caption");
 const cardImageClosebtn = previewModal.querySelector(".modal__close-btn");
 
 function handleLikeClickEventSubmit(evt) {
@@ -64,7 +64,7 @@ function getCardElement(data) {
     .cloneNode(true);
 
   const cardNameEl = cardElement.querySelector(".card__title");
-  const cardImageEl = cardElement.querySelector(".card__image");
+  const cardImageEl = cardElement.querySelector(".modal__image");
   const cardLikEl = cardElement.querySelector(".card__like-button");
   const cardDelete = cardElement.querySelector(".card__delete-image");
 
@@ -76,6 +76,7 @@ function getCardElement(data) {
     openModal(previewModal);
     previewModalCaption.textContent = data.name;
     previewModalImage.src = data.link;
+    previewModalImage.alt = data.name;
   });
 
   cardImageClosebtn.addEventListener("click", () => {

@@ -42,7 +42,7 @@
                 alt="button"
                 type="button"
               ></button>
-              <img class="card__image" />
+              <img class="modal__image" />
               <div class="card__footer">
                 <h2 class="card__title"></h2>
                 <button
@@ -94,14 +94,14 @@
 
     <div class="modal" id="preview-modal">
       <div class="modal__container-image modal__container_type_preview">
-        <img class="card__image" src="" alt="" />
         <button
           aria-label="Close modal"
-          class="modal__close-btn modal__close_type_preview"
+          class="modal__close-btn modal__close-btn_type_preview"
           type="button"
         ></button>
+        <img class="modal__image" src="test" alt="" />
+        <p class="modal__caption"></p>
       </div>
-      <p class="card__title-preview"></p>
     </div>
 
     <div class="modal" id="add-card-edit-modal">
@@ -126,7 +126,7 @@
             Caption
             <input
               id="add-card-name-description"
-              type="name"
+              type="text"
               class="modal__input"
               placeholder="Describe yourself"
             />

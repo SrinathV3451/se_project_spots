@@ -11,6 +11,7 @@
   justify-content: center;
   padding: 0 20px;
   visibility: hidden;
+  opacity: 100%;
   border-radius: 8px;
   transition: visibility 0.3s, opacity 0.3s ease-in;
 }
@@ -21,8 +22,17 @@
   gap: 32px;
 }
 
+.modal__image {
+  width: 100%;
+  height: 413px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 0;
+}
+
 .modal_opened {
   visibility: visible;
+  opacity: 100%;
 }
 
 .modal__container {
@@ -39,16 +49,12 @@
 }
 
 .modal__container-image {
-  display: flex;
-  justify-content: flex-end;
   max-width: 730px;
   position: relative;
   box-sizing: border-box;
   border-radius: 8px;
-  padding-top: 32px;
-  padding-right: 50px;
-  padding-bottom: 32px;
-  padding-left: 50px;
+  padding: 0;
+  width: 100%;
 }
 
 .modal__container_type_preview {
@@ -125,6 +131,18 @@
   justify-content: space-between;
 }
 
+.modal__caption {
+  display: inline-block;
+  justify-content: left;
+  max-width: 100%;
+  height: 32;
+  border-radius: 8px;
+  padding: 0;
+  margin: 0;
+  background: #212121;
+  -webkit-text-fill-color: white;
+}
+
 .modal__submit-btn {
   width: 156px;
   padding: 18px 32px 18px 32px;
@@ -138,13 +156,20 @@
   font-size: 16px;
 }
 
-.modal__close_type_preview {
-  display: flex;
-  justify-content: end;
+.modal__close-btn_type_preview {
+  top: 0;
+  right: -32px;
   padding: 0;
+  position: absolute;
   background: transparent url("../images/close-btn-light.svg") center no-repeat;
   height: 30px;
   width: 30px;
+}
+
+@media (max-width: 630px) {
+  .modal__image {
+    height: 288px;
+  }
 }
 
 @media (max-width: 320px) {
@@ -209,19 +234,27 @@
     gap: 194px;
   }
 
+  .modal__container-image {
+    position: absolute;
+    width: 90%;
+    top: 89px;
+    border-radius: 4px;
+  }
+
   .modal__close-btn {
     opacity: 0.4;
     position: absolute;
     right: 21px;
   }
 
-  .modal__close_type_preview {
+  .modal__close-btn_type_preview {
     display: flex;
     justify-content: left;
+    position: absolute;
+    top: -30px;
     padding: 0;
     height: 30px;
     width: 30px;
-    left: 190px;
     right: 0;
   }
 }
