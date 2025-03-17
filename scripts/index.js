@@ -79,10 +79,6 @@ function getCardElement(data) {
     previewModalImage.alt = data.name;
   });
 
-  cardImageClosebtn.addEventListener("click", () => {
-    closeModal(previewModal);
-  });
-
   cardLikEl.addEventListener("click", () => {
     cardLikEl.classList.toggle("card__like-button-liked");
   });
@@ -123,6 +119,10 @@ function handleCardFormEventSubmit(evt) {
   closeModal(cardForm);
   evt.target.reset();
 }
+
+cardImageClosebtn.addEventListener("click", () => {
+  closeModal(previewModal);
+});
 
 editModalCloseBtn.addEventListener("click", (evt) => {
   closeModal(editModal);
