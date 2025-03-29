@@ -94,6 +94,7 @@ function getCardElement(data) {
 }
 
 function openModal(modal) {
+  resetValidation(editFormElement, [editInputEditText, editDecriptionEditText]);
   modal.classList.add("modal_opened");
   document.addEventListener("keyup", handleEscapKeyPressed);
   document.addEventListener("mouseup", handleMouseClick);
@@ -102,7 +103,6 @@ function openModal(modal) {
 profileEditButton.addEventListener("click", () => {
   editInputEditText.value = profileInputEditText.textContent;
   editDecriptionEditText.value = profileDecscriptionEditText.textContent;
-  resetValidation(editFormElement, [editInputEditText, editDecriptionEditText]);
   openModal(editModal);
 });
 
@@ -110,6 +110,7 @@ function handleEscapKeyPressed(evt) {
   if (evt.key == "Escape") {
     closeModal(cardForm);
     closeModal(editModal);
+    closeModal(previewModal);
   }
 }
 
@@ -119,6 +120,9 @@ function handleMouseClick(evt) {
   }
   if (evt.srcElement.id == "edit-modal") {
     closeModal(editModal);
+  }
+  if (evt.srcElement.id == "preview-modal") {
+    closeModal(previewModal);
   }
 }
 
