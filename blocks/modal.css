@@ -73,11 +73,10 @@
 .modal__label {
   display: flex;
   flex-direction: column;
-  gap: 8px;
   font-size: 16px;
   margin-bottom: 32px;
   width: 630px;
-  height: 78px;
+  gap: 8px;
 }
 
 .modal__input {
@@ -89,6 +88,21 @@
   opacity: 0.4;
   cursor: pointer;
   border: 1px solid #21212166;
+  margin-bottom: 0;
+}
+
+.modal__input_type_error {
+  border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
+.modal__button_inactive {
+  color: grey;
+}
+
+.modal__error {
+  display: block;
+  margin-top: 8px;
+  color: red;
 }
 
 .modal__input:hover {

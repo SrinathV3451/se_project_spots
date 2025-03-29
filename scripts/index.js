@@ -50,9 +50,12 @@ const formModalCloseBtn = cardForm.querySelector(".modal__close-btn");
 const cardFormUrl = cardForm.querySelector("#add-card-link-name");
 const cardFormCaption = cardForm.querySelector("#add-card-name-description");
 const previewModal = document.querySelector("#preview-modal");
+const cardSubmitBtn = document.querySelector(".modal__submit-btn");
 const previewModalImage = previewModal.querySelector(".modal__image");
 const previewModalCaption = previewModal.querySelector(".modal__caption");
 const cardImageClosebtn = previewModal.querySelector(".modal__close-btn");
+
+// listeing on a modal if where  you click is not a modal then close
 
 function handleLikeClickEventSubmit(evt) {
   evt.preventDefault();
@@ -92,15 +95,36 @@ function getCardElement(data) {
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keyup", handleEscapKeyPressed);
+  document.addEventListener("mouseup", handleMouseClick);
 }
 
 profileEditButton.addEventListener("click", () => {
   editInputEditText.value = profileInputEditText.textContent;
   editDecriptionEditText.value = profileDecscriptionEditText.textContent;
+  resetValidation(editFormElement, [editInputEditText, editDecriptionEditText]);
   openModal(editModal);
 });
 
+function handleEscapKeyPressed(evt) {
+  if (evt.key == "Escape") {
+    closeModal(cardForm);
+    closeModal(editModal);
+  }
+}
+
+function handleMouseClick(evt) {
+  if (evt.srcElement.id == "add-card-edit-modal") {
+    closeModal(cardForm);
+  }
+  if (evt.srcElement.id == "edit-modal") {
+    closeModal(editModal);
+  }
+}
+
 function closeModal(modal) {
+  document.removeEventListener("keyup", handleEscapKeyPressed);
+  document.removeEventListener("mouseup", handleMouseClick);
   modal.classList.remove("modal_opened");
 }
 
@@ -132,6 +156,9 @@ editFormElement.addEventListener("submit", handleEditFormEventSubmit);
 cardForm.addEventListener("submit", handleCardFormEventSubmit);
 
 cardModalBtn.addEventListener("click", () => {
+  cardFormUrl.value = "";
+  cardFormCaption.value = "";
+  resetValidation(cardForm, [cardFormUrl, cardFormCaption]);
   openModal(cardModal);
 });
 
