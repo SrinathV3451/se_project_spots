@@ -97,6 +97,9 @@ function getCardElement(data) {
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  // if (modal != editModal) {
+  cardSubmitBtn.classList.add(settings.buttonInactive);
+  // }
   document.addEventListener("keyup", handleEscapKeyPressed);
   document.addEventListener("mouseup", handleMouseClick);
 }
@@ -107,28 +110,25 @@ profileEditButton.addEventListener("click", () => {
   resetValidation(
     editFormElement,
     [editInputEditText, editDecriptionEditText],
-    validationConfig
+    settings
   );
   openModal(editModal);
 });
 
 function handleEscapKeyPressed(evt) {
   if (evt.key == "Escape") {
-    closeModal(cardForm);
-    closeModal(editModal);
-    closeModal(previewModal);
+    if (evt.key == "Escape") {
+      const openedModal = document.querySelector(".modal_opened");
+      closeModal(openedModal);
+      disableButton(cardSubmitBtn);
+    }
   }
 }
 
 function handleMouseClick(evt) {
-  if (evt.srcElement.id == "add-card-edit-modal") {
-    closeModal(cardForm);
-  }
-  if (evt.srcElement.id == "edit-modal") {
-    closeModal(editModal);
-  }
-  if (evt.srcElement.id == "preview-modal") {
-    closeModal(previewModal);
+  if (evt.target.classList.contains("modal_opened")) {
+    closeModal(evt.target);
+    disableButton(cardSubmitBtn);
   }
 }
 
@@ -136,6 +136,7 @@ function closeModal(modal) {
   document.removeEventListener("keyup", handleEscapKeyPressed);
   document.removeEventListener("mouseup", handleMouseClick);
   modal.classList.remove("modal_opened");
+  disableButton(cardSubmitBtn);
 }
 
 function handleEditFormEventSubmit(evt) {
@@ -143,7 +144,6 @@ function handleEditFormEventSubmit(evt) {
   profileInputEditText.textContent = editInputEditText.value;
   profileDecscriptionEditText.textContent = editDecriptionEditText.value;
   closeModal(editModal);
-  // disableButton(editSubmitBtn);
 }
 
 function handleCardFormEventSubmit(evt) {
@@ -153,7 +153,6 @@ function handleCardFormEventSubmit(evt) {
   cardsList.prepend(cardElement);
   closeModal(cardForm);
   evt.target.reset();
-  // disableButton(cardSubmitBtn);
 }
 
 cardImageClosebtn.addEventListener("click", () => {

@@ -166,6 +166,19 @@
   font-size: 16px;
 }
 
+.modal__button__inactive {
+  width: 156px;
+  padding: 18px 32px 18px 32px;
+  height: 52px;
+  gap: 8px;
+  background: grey;
+  border-radius: 8px;
+  color: #fcf5e5;
+  cursor: default;
+  align-items: center;
+  font-size: 16px;
+}
+
 .modal__close-btn_type_preview {
   top: 0;
   right: -32px;
