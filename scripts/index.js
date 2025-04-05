@@ -57,8 +57,6 @@ const previewModalImage = previewModal.querySelector(".modal__image");
 const previewModalCaption = previewModal.querySelector(".modal__caption");
 const cardImageClosebtn = previewModal.querySelector(".modal__close-btn");
 
-// listeing on a modal if where  you click is not a modal then close
-
 function handleLikeClickEventSubmit(evt) {
   evt.preventDefault();
 }
@@ -96,10 +94,8 @@ function getCardElement(data) {
 }
 
 function openModal(modal) {
+  resetValidation(editFormElement, [editInputEditText, editDecriptionEditText]);
   modal.classList.add("modal_opened");
-  // if (modal != editModal) {
-  cardSubmitBtn.classList.add(settings.buttonInactive);
-  // }
   document.addEventListener("keyup", handleEscapKeyPressed);
   document.addEventListener("mouseup", handleMouseClick);
 }
@@ -107,11 +103,7 @@ function openModal(modal) {
 profileEditButton.addEventListener("click", () => {
   editInputEditText.value = profileInputEditText.textContent;
   editDecriptionEditText.value = profileDecscriptionEditText.textContent;
-  resetValidation(
-    editFormElement,
-    [editInputEditText, editDecriptionEditText],
-    settings
-  );
+  resetValidation(editFormElement, [editInputEditText, editDecriptionEditText]);
   openModal(editModal);
 });
 
@@ -120,7 +112,6 @@ function handleEscapKeyPressed(evt) {
     if (evt.key == "Escape") {
       const openedModal = document.querySelector(".modal_opened");
       closeModal(openedModal);
-      disableButton(cardSubmitBtn);
     }
   }
 }
@@ -128,7 +119,6 @@ function handleEscapKeyPressed(evt) {
 function handleMouseClick(evt) {
   if (evt.target.classList.contains("modal_opened")) {
     closeModal(evt.target);
-    disableButton(cardSubmitBtn);
   }
 }
 
@@ -136,7 +126,6 @@ function closeModal(modal) {
   document.removeEventListener("keyup", handleEscapKeyPressed);
   document.removeEventListener("mouseup", handleMouseClick);
   modal.classList.remove("modal_opened");
-  disableButton(cardSubmitBtn);
 }
 
 function handleEditFormEventSubmit(evt) {
@@ -153,6 +142,7 @@ function handleCardFormEventSubmit(evt) {
   cardsList.prepend(cardElement);
   closeModal(cardForm);
   evt.target.reset();
+  disableButton(cardSubmitBtn);
 }
 
 cardImageClosebtn.addEventListener("click", () => {
@@ -166,9 +156,7 @@ editModalCloseBtn.addEventListener("click", (evt) => {
 editFormElement.addEventListener("submit", handleEditFormEventSubmit);
 cardForm.addEventListener("submit", handleCardFormEventSubmit);
 
-cardModalBtn.addEventListener("click", () => {
-  cardFormUrl.value = "";
-  cardFormCaption.value = "";
+cardModalBtn.addEventListener("click", (evt) => {
   resetValidation(cardForm, [cardFormUrl, cardFormCaption]);
   openModal(cardModal);
 });
