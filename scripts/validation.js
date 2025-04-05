@@ -11,7 +11,6 @@ const showInputError = (formElement, inputElement, errorMsg, config) => {
   const errorMsgID = inputElement.id + "-error";
   const errorMsgEl = formElement.querySelector("#" + errorMsgID);
   errorMsgEl.textContent = errorMsg;
-  inputElement.classList.add(config.buttonInactive);
 };
 
 const hideInputError = (formElement, inputElement) => {

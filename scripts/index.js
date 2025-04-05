@@ -157,7 +157,6 @@ editFormElement.addEventListener("submit", handleEditFormEventSubmit);
 cardForm.addEventListener("submit", handleCardFormEventSubmit);
 
 cardModalBtn.addEventListener("click", (evt) => {
-  resetValidation(cardForm, [cardFormUrl, cardFormCaption]);
   openModal(cardModal);
 });
 
